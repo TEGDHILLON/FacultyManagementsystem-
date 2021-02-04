@@ -1,0 +1,54 @@
+﻿@model IEnumerable<TeginderpalD_301093892.Models.Faculty>
+
+@{
+    ViewBag.Title = " Faculty list";
+    Layout = "_BasicLayout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Faculty List</title>
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="panel panel-success">
+        <div class="panel-heading text-center"> <img src="/images/prof1.png" class="logo" width="50" height="50" /><h4> Faculty List</h4></div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3">
+
+                    <table class="table table-sm table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Department</th>
+                                <th>Course</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (TeginderpalD_301093892.Models.Faculty r in Model)
+                            {
+                                <tr>
+                                    <td>@r.FacultyName</td>
+                                    <td>@r.FacultyDepartment</td>
+                                    <td>@r.FacultyCourse</td>
+                                    <td>@r.FacultyPhone</td>
+                                    <td>@r.FacultyEmail</td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+
+                </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

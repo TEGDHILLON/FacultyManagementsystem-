@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using TeginderpalD_301093892.Models;
 
 namespace TeginderpalD_301093892.Controllers
 {
@@ -12,24 +13,59 @@ namespace TeginderpalD_301093892.Controllers
         {
             return View();
         }
+        [HttpGet]
         public ViewResult AddFaculty()
         {
             return View();
         }
-
-        public ViewResult Faculty()
+        [HttpPost]
+        public ViewResult AddFaculty(Faculty faculty)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                Repository.AddFaculty(faculty);
+                return View("FacultyAddition",faculty);
+            }
+            else
+            {
+                return View();
+            }
+        }   
+
+        public ViewResult ViewFaculty()
+        {
+            return View(Repository.Addition);
         }
 
+        [HttpGet]
         public ViewResult AddCourse()
         {
             return View();
         }
+        [HttpPost]
+        public ViewResult AddCourse(Course course)
+        {
+            if (ModelState.IsValid)
+            {
+                Repository.AddCourse(course);
 
-        public ViewResult Course()
+                return View("CourseEnrolled", course);
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        public ViewResult ViewCourse()
+        {
+            return View(Repository.Enrolled);
+        }
+
+        public ViewResult Contact()
         {
             return View();
         }
+
     }
 }

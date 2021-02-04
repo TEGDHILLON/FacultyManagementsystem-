@@ -1,9 +1,57 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model TeginderpalD_301093892.Models.Course
+
 @{
-    ViewBag.Title = "AddCourse";
+    ViewBag.Title = "add course";
+    Layout = "_BasicLayout";
 }
-<h1>Add Course</h1>
 
+<!DOCTYPE html>
 
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddCourse</title>
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+    <div class="panel panel-success">
+        <div class="panel-heading text-center"> <img src="/images/course.png" class="logo" width="50" height="50" /><h4>Add Course</h4></div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3">
+                    <form class="p-a-1" asp-action="AddCourse" method="Post">
+                        <div asp-validation-summary="All"></div>
+                        <div class="form-group">
+                            <label asp-for="CourseName">Name</label>
+                            <input class="form-control" asp-for="CourseName" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CourseDepartment">Department</label>
+                            <input class="form-control" asp-for="CourseDepartment" placeholder="Department">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CourseCode">Course Code</label>
+                            <input class="form-control" asp-for="CourseCode" placeholder="Code">
+                        </div>
+                        <div>
+                            <label asp-for="CourseTerm">Course Term </label>
+                            <select asp-for="CourseTerm">
+                                <option value="">Please select Term</option>
+                                <option value="Winter">Winter</option>
+                                <option value="Summer">Summer</option>
+                                <option value="Fall">Fall</option>
+                            </select>
+
+                        </div>
+                        <button type="submit" class="btn btn-success">Add</button>
+                        <button asp-action="Index" class="btn btn-danger">Cancel</button>
+                        
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

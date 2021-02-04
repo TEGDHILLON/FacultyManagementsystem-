@@ -19,14 +19,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-left">TeginderPalD_301093892</a>
+
+                <img src="/images/college_logo.png" class="logo" width="50" height="50" />
+                
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a asp-action="Index">Home</a></li>
-                    <li><a asp-action="Faculty">Faculty</a></li>
-                    <li><a asp-action="Course">Course</a></li>
+                    <li><a asp-action="ViewFaculty">Faculty</a></li>
+                    <li><a asp-action="ViewCourse">Course</a></li>
                     <li><a asp-action="AddFaculty">Add Faculty</a></li>
                     <li><a asp-action="AddCourse">Add Course</a></li>
                 </ul>
@@ -37,7 +39,18 @@
     <div class="container">
         @RenderBody()
     </div>
-
+    
     <script type="text/javascript" src="~/static/JavaScript.js"></script>
+
+    <footer>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a asp-controller="Home" asp-action="Contact">Contact Us</a></li>
+            </ul>
+            <p>Copyright TeginderPalD_301093892</p>
+        
+        </div>
+
+    </footer>
 </body>
 </html>

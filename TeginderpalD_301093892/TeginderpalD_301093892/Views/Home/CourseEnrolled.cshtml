@@ -1,0 +1,24 @@
+﻿@model TeginderpalD_301093892.Models.Course
+
+@{
+    ViewBag.Title = "Course Added";
+    Layout = "_BasicLayout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Course Added</title>
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" />
+</head>
+<body class="text-center">
+    <p>
+        <h2>Course: @Model.CourseName Added</h2>
+
+    </p>
+    <p> <a class="nav-link" asp-action="ViewCourse">Click here to view Course List</a></p>
+  
+</body>
+</html>
