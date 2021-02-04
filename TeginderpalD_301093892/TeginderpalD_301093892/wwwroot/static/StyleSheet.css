@@ -1,0 +1,31 @@
+﻿body {
+}
+
+.singleReview {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+.singleReview p {
+    margin-bottom: 0;
+}
+
+.fa-star.checked {
+    color: #FFDF00;
+}
+
+.viewRecipe h5 {
+    font-weight: 700;
+}
+
+.homePageListing .card {
+    margin-bottom: 20px;
+}
+
+.homePageListing h2 {
+    margin-top: 10px;
+}
+
+.homePageListing img {
+    cursor: pointer;
+}
